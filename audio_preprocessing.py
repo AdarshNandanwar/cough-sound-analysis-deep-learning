@@ -136,39 +136,31 @@ def get_features_csv_row(signal, sample_rate, num_mfcc=13, n_fft=2048, hop_lengt
     # extract mfcc
     mfcc = librosa.feature.mfcc(signal, sample_rate, n_mfcc=num_mfcc, n_fft=n_fft, hop_length=hop_length)
     mfcc = mfcc.T
-    log_file.write("\nShape of mfcc: {}".format(mfcc.shape))
     csv_row += sum(mfcc.tolist(), [])
         
     # extract spectral centeroid
     spectral_centroids = librosa.feature.spectral_centroid(signal, sr=sample_rate)[0]
-    log_file.write("\nShape of spectral centroids: {}".format(spectral_centroids.shape))
     csv_row += spectral_centroids.tolist()
     
     # extract spectral rolloff
     spectral_rolloffs = librosa.feature.spectral_rolloff(signal+0.01, sr=sample_rate)[0]
-    log_file.write("\nShape of spectral rolloffs: {}".format(spectral_rolloffs.shape))
     csv_row += spectral_rolloffs.tolist()
     
     # extract spectral bandwidth
     spectral_bandwidth_2 = librosa.feature.spectral_bandwidth(signal+0.01, sr=sample_rate)[0]
-    log_file.write("\nShape of spectral bandwidth 2: {}".format(spectral_bandwidth_2.shape))
     csv_row += spectral_bandwidth_2.tolist()
     spectral_bandwidth_3 = librosa.feature.spectral_bandwidth(signal+0.01, sr=sample_rate, p=3)[0]
-    log_file.write("\nShape of spectral bandwidth 3: {}".format(spectral_bandwidth_3.shape))
     csv_row += spectral_bandwidth_3.tolist()
     spectral_bandwidth_4 = librosa.feature.spectral_bandwidth(signal+0.01, sr=sample_rate, p=4)[0]
-    log_file.write("\nShape of spectral bandwidth 4: {}".format(spectral_bandwidth_4.shape))
     csv_row += spectral_bandwidth_4.tolist()
     
     # extract zero-crossing rate                    
     zero_crossing_rates = librosa.feature.zero_crossing_rate(signal, pad=False)[0]
-    log_file.write("\nShape of zero crossing rates: {}".format(zero_crossing_rates.shape))
     csv_row += zero_crossing_rates.tolist()
     
     # extract croma features
     chroma_features = librosa.feature.chroma_stft(signal, sr=sample_rate, hop_length=hop_length)
     chroma_features = chroma_features.T
-    log_file.write("\nShape of chroma features: {}".format(chroma_features.shape))
     csv_row += sum(chroma_features.tolist(), [])
 
     return csv_row
