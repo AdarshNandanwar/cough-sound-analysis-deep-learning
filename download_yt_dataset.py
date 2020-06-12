@@ -6,6 +6,7 @@ import librosa
 import json
 import os
 import requests
+from clear_yt_dataset import clear_yt_dataset, clear_yt_downloads
 
 SAMPLE_RATE = 22050
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -32,11 +33,11 @@ def download_youtube_audio(label, link, start_time=0.0, duration = 5.0):
             filename = str(curr_link_number)
             link_filename_map[link] = filename
             curr_link_number += 1
-
-        # download audio from youtube
-        yt = YouTube(link)
-        yt_audio = yt.streams.get_audio_only()
-        yt_audio.download(output_path=download_path, filename=filename)
+            
+            # download audio from youtube
+            yt = YouTube(link)
+            yt_audio = yt.streams.get_audio_only()
+            yt_audio.download(output_path=download_path, filename=filename)
 
         # crop and save audio file
         file_path = os.path.join(BASE_DIR, download_path, filename+'.mp4')
@@ -49,30 +50,6 @@ def download_youtube_audio(label, link, start_time=0.0, duration = 5.0):
 
     except Exception as e:
         print(e)
-
-
-def clear_yt_dataset():
-    labels = ['dry', 'wet', 'whooping', 'croup']
-    for label in labels:
-        mydir = os.path.join(BASE_DIR, 'yt_dataset', label)
-        if not os.path.exists(mydir):
-            os.makedirs(mydir)
-        filelist = [ f for f in os.listdir(mydir) if f.endswith(".wav") ]
-        for f in filelist:
-            os.remove(os.path.join(mydir, f))
-
-def clear_yt_downloads():
-    mydir = os.path.join(BASE_DIR, 'yt_downloads')
-    if not os.path.exists(mydir):
-        os.makedirs(mydir)
-    filelist = [ f for f in os.listdir(mydir) if f.endswith(".mp4") ]
-    for f in filelist:
-        os.remove(os.path.join(mydir, f))
-
-    # clear JSON map file
-    link_filename_map = {}
-    with open(os.path.join(BASE_DIR, 'link_filename_map.json'), 'w') as fp:
-        json.dump(link_filename_map, fp)
 
 
 if __name__ == "__main__":
