@@ -8,7 +8,7 @@ Track Duration: 0.43201814058956917s, Samples per track: 9526.0
 Samples per segment: 9526, No. of mfcc vectors per segment: 19
 dataset/train/cough/1745-9974-2-1-S5.mp3, segment:1
 Shape of mfcc: (19, 13)
-Shape of spectral centeroids: (19,)
+Shape of spectral centroids: (19,)
 Shape of spectral rolloffs: (19,)
 Shape of spectral bandwidth 2: (19,)
 Shape of spectral bandwidth 3: (19,)
@@ -21,7 +21,7 @@ Track Duration: 0.72s, Samples per track: 15876.0
 Samples per segment: 15876, No. of mfcc vectors per segment: 32
 dataset/train/cough/1745-9974-2-1-S6.mp3, segment:1
 Shape of mfcc: (32, 13)
-Shape of spectral centeroids: (32,)
+Shape of spectral centroids: (32,)
 Shape of spectral rolloffs: (32,)
 Shape of spectral bandwidth 2: (32,)
 Shape of spectral bandwidth 3: (32,)
@@ -34,7 +34,7 @@ Track Duration: 2.52s, Samples per track: 55566.0
 Samples per segment: 55566, No. of mfcc vectors per segment: 109
 dataset/train/cough/1745-9974-2-1-S9.mp3, segment:1
 Shape of mfcc: (109, 13)
-Shape of spectral centeroids: (109,)
+Shape of spectral centroids: (109,)
 Shape of spectral rolloffs: (109,)
 Shape of spectral bandwidth 2: (109,)
 Shape of spectral bandwidth 3: (109,)
@@ -47,7 +47,7 @@ Track Duration: 0.5760090702947845s, Samples per track: 12701.0
 Samples per segment: 12701, No. of mfcc vectors per segment: 25
 dataset/train/cough/1745-9974-2-1-S7.mp3, segment:1
 Shape of mfcc: (25, 13)
-Shape of spectral centeroids: (25,)
+Shape of spectral centroids: (25,)
 Shape of spectral rolloffs: (25,)
 Shape of spectral bandwidth 2: (25,)
 Shape of spectral bandwidth 3: (25,)
@@ -60,7 +60,7 @@ Track Duration: 0.5760090702947845s, Samples per track: 12701.0
 Samples per segment: 12701, No. of mfcc vectors per segment: 25
 dataset/train/cough/1745-9974-2-1-S3.mp3, segment:1
 Shape of mfcc: (25, 13)
-Shape of spectral centeroids: (25,)
+Shape of spectral centroids: (25,)
 Shape of spectral rolloffs: (25,)
 Shape of spectral bandwidth 2: (25,)
 Shape of spectral bandwidth 3: (25,)
@@ -73,7 +73,7 @@ Track Duration: 0.8280272108843537s, Samples per track: 18258.0
 Samples per segment: 18258, No. of mfcc vectors per segment: 36
 dataset/train/cough/1745-9974-2-1-S8.mp3, segment:1
 Shape of mfcc: (36, 13)
-Shape of spectral centeroids: (36,)
+Shape of spectral centroids: (36,)
 Shape of spectral rolloffs: (36,)
 Shape of spectral bandwidth 2: (36,)
 Shape of spectral bandwidth 3: (36,)
@@ -86,7 +86,7 @@ Track Duration: 1.08s, Samples per track: 23814.0
 Samples per segment: 23814, No. of mfcc vectors per segment: 47
 dataset/train/cough/1745-9974-2-1-S2.mp3, segment:1
 Shape of mfcc: (47, 13)
-Shape of spectral centeroids: (47,)
+Shape of spectral centroids: (47,)
 Shape of spectral rolloffs: (47,)
 Shape of spectral bandwidth 2: (47,)
 Shape of spectral bandwidth 3: (47,)
@@ -99,7 +99,7 @@ Track Duration: 0.72s, Samples per track: 15876.0
 Samples per segment: 15876, No. of mfcc vectors per segment: 32
 dataset/train/cough/1745-9974-2-1-S4.mp3, segment:1
 Shape of mfcc: (32, 13)
-Shape of spectral centeroids: (32,)
+Shape of spectral centroids: (32,)
 Shape of spectral rolloffs: (32,)
 Shape of spectral bandwidth 2: (32,)
 Shape of spectral bandwidth 3: (32,)
@@ -112,7 +112,7 @@ Track Duration: 0.6480272108843538s, Samples per track: 14289.0
 Samples per segment: 14289, No. of mfcc vectors per segment: 28
 dataset/train/cough/1745-9974-2-1-S1.mp3, segment:1
 Shape of mfcc: (28, 13)
-Shape of spectral centeroids: (28,)
+Shape of spectral centroids: (28,)
 Shape of spectral rolloffs: (28,)
 Shape of spectral bandwidth 2: (28,)
 Shape of spectral bandwidth 3: (28,)

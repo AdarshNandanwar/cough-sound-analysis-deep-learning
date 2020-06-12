@@ -27,7 +27,7 @@ def save_mfcc(dataset_path, json_path, num_mfcc=13, n_fft=2048, hop_length=512, 
         "mapping": [],
         "labels": [],
         "mfccs": [],
-        "spectral_centeroids": [],
+        "spectral_centroids": [],
         "spectral_rolloffs": [],
         "spectral_bandwidth_2": [],
         "spectral_bandwidth_3": [],
@@ -90,8 +90,8 @@ def save_mfcc(dataset_path, json_path, num_mfcc=13, n_fft=2048, hop_length=512, 
                     
                     # extract spectral centeroid
                     spectral_centroids = librosa.feature.spectral_centroid(signal, sr=sample_rate)[0]
-                    log_file.write("\nShape of spectral centeroids: {}".format(spectral_centroids.shape))
-                    data["spectral_centeroids"].append(spectral_centroids.tolist())
+                    log_file.write("\nShape of spectral centroids: {}".format(spectral_centroids.shape))
+                    data["spectral_centroids"].append(spectral_centroids.tolist())
                     
                     
                     # extract spectral rolloff

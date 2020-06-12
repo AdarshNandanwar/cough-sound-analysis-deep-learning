@@ -7,8 +7,8 @@ import sklearn
 
 FIG_SIZE = (15,10)
 
-file = "dataset/train/1745-9974-2-1-S1.mp3"
-# file = "dataset/train/1745-9974-2-1-S9.mp3"
+# file = "dataset/train/cough/1745-9974-2-1-S1.mp3"
+file = "dataset/train/cough/1745-9974-2-1-S9.mp3"
 
 # load audio file with Librosa
 signal, sample_rate = librosa.load(file, sr=22050)
