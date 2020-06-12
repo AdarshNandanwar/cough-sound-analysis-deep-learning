@@ -10,16 +10,20 @@ import requests
 SAMPLE_RATE = 22050
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 link_filename_map = {}
-with open('link_filename_map.json', 'r') as fp:
-    link_filename_map = json.load(fp)
-curr_link_number = len(link_filename_map)
 curr_file_number = 0
+curr_link_number = 0
+try:
+    with open(os.path.join(BASE_DIR, 'link_filename_map.json'), 'r') as fp:
+        link_filename_map = json.load(fp)
+    curr_link_number = len(link_filename_map)
+except Exception as e:
+    pass
 
-def download_youtube_audio(label, link, filename, start_time=0.0, duration = 5.0):
+def download_youtube_audio(label, link, start_time=0.0, duration = 5.0):
     global link_filename_map
     global curr_link_number
     global curr_file_number
-    download_path='yt_downloads'
+    download_path=os.path.join(BASE_DIR, 'yt_downloads')
 
     try:
         # download file if not downloaded
@@ -84,7 +88,7 @@ if __name__ == "__main__":
         google_sheets_data = google_sheets_data.json()['feed'].get('entry')
         if google_sheets_data:
             for entry in google_sheets_data:
-                download_youtube_audio(label=labels[i], link=entry['gsx$link']['$t'], filename=str(curr_file_number), start_time=float(entry['gsx$starttime']['$t']), duration=float(entry['gsx$duration']['$t']))
+                download_youtube_audio(label=labels[i], link=entry['gsx$link']['$t'], start_time=float(entry['gsx$starttime']['$t']), duration=float(entry['gsx$duration']['$t']))
 
-    with open('link_filename_map.json', 'w') as fp:
+    with open(os.path.join(BASE_DIR, 'link_filename_map.json'), 'w') as fp:
         json.dump(link_filename_map, fp)

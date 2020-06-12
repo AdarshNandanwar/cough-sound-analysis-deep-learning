@@ -2,6 +2,10 @@ venv/
 yt_dataset
 yt_downloads
 tempCodeRunnerFile.py
+classification_data.json
+classification_log.txt
+detection_data.json
+detection_log.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
