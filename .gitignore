@@ -3,9 +3,12 @@ yt_dataset
 yt_downloads
 tempCodeRunnerFile.py
 classification_data.json
+classification_data.csv
 classification_log.txt
 detection_data.json
+detection_data.csv
 detection_log.txt
+mapping.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
