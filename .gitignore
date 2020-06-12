@@ -9,6 +9,7 @@ detection_data.json
 detection_data.csv
 detection_log.txt
 mapping.txt
+extra_data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
