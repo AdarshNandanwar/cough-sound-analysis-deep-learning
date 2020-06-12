@@ -5,8 +5,10 @@ import os
 import math
 import librosa
 
-DATASET_PATH = "dataset/train"
-JSON_PATH = "processed_data.json"
+DETECTION_DATASET_PATH = "detection_dataset"
+CLASSIFICATION_DATASET_PATH = "yt_dataset"
+DETECTION_JSON_PATH = "detection_data.json"
+CLASSIFICATION_JSON_PATH = "classification_data.json"
 SAMPLE_RATE = 22050
 
 
@@ -133,6 +135,13 @@ def save_mfcc(dataset_path, json_path, num_mfcc=13, n_fft=2048, hop_length=512, 
         
         
 if __name__ == "__main__":
-    log_file = open("log.txt", 'w')
-    save_mfcc(DATASET_PATH, JSON_PATH, num_segments=1)
+    print("Creating detection dataset.")
+    log_file = open("detection_log.txt", 'w')
+    save_mfcc(DETECTION_DATASET_PATH, DETECTION_JSON_PATH, num_segments=1)
     log_file.close()
+    print("Detection dataset created successuflly.")
+    print("Creating classification dataset.")
+    log_file = open("classification_log.txt", 'w')
+    save_mfcc(CLASSIFICATION_DATASET_PATH, CLASSIFICATION_JSON_PATH, num_segments=1)
+    log_file.close()
+    print("Classification dataset created successuflly.")

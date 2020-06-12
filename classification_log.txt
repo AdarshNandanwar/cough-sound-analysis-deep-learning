@@ -1,0 +1,60 @@
+
+Processing: whooping
+
+Signal shape: (110250,), Sample rate: 22050
+Track Duration: 5.0s, Samples per track: 110250.0
+Samples per segment: 110250, No. of mfcc vectors per segment: 216
+yt_dataset/whooping/1.wav, segment:1
+Shape of mfcc: (216, 13)
+Shape of spectral centroids: (216,)
+Shape of spectral rolloffs: (216,)
+Shape of spectral bandwidth 2: (216,)
+Shape of spectral bandwidth 3: (216,)
+Shape of spectral bandwidth 4: (216,)
+Shape of zero crossing rates: (216,)
+Shape of chroma features: (216, 12)
+
+Signal shape: (110250,), Sample rate: 22050
+Track Duration: 5.0s, Samples per track: 110250.0
+Samples per segment: 110250, No. of mfcc vectors per segment: 216
+yt_dataset/whooping/0.wav, segment:1
+Shape of mfcc: (216, 13)
+Shape of spectral centroids: (216,)
+Shape of spectral rolloffs: (216,)
+Shape of spectral bandwidth 2: (216,)
+Shape of spectral bandwidth 3: (216,)
+Shape of spectral bandwidth 4: (216,)
+Shape of zero crossing rates: (216,)
+Shape of chroma features: (216, 12)
+
+Signal shape: (110250,), Sample rate: 22050
+Track Duration: 5.0s, Samples per track: 110250.0
+Samples per segment: 110250, No. of mfcc vectors per segment: 216
+yt_dataset/whooping/2.wav, segment:1
+Shape of mfcc: (216, 13)
+Shape of spectral centroids: (216,)
+Shape of spectral rolloffs: (216,)
+Shape of spectral bandwidth 2: (216,)
+Shape of spectral bandwidth 3: (216,)
+Shape of spectral bandwidth 4: (216,)
+Shape of zero crossing rates: (216,)
+Shape of chroma features: (216, 12)
+
+Processing: croup
+
+Signal shape: (110250,), Sample rate: 22050
+Track Duration: 5.0s, Samples per track: 110250.0
+Samples per segment: 110250, No. of mfcc vectors per segment: 216
+yt_dataset/croup/3.wav, segment:1
+Shape of mfcc: (216, 13)
+Shape of spectral centroids: (216,)
+Shape of spectral rolloffs: (216,)
+Shape of spectral bandwidth 2: (216,)
+Shape of spectral bandwidth 3: (216,)
+Shape of spectral bandwidth 4: (216,)
+Shape of zero crossing rates: (216,)
+Shape of chroma features: (216, 12)
+
+Processing: wet
+
+Processing: dry

@@ -7,8 +7,8 @@ import sklearn
 
 FIG_SIZE = (15,10)
 
-# file = "dataset/train/cough/1745-9974-2-1-S1.mp3"
-file = "dataset/train/cough/1745-9974-2-1-S9.mp3"
+# file = "detection_dataset/cough/1745-9974-2-1-S1.mp3"
+file = "detection_dataset/cough/1745-9974-2-1-S9.mp3"
 
 # load audio file with Librosa
 signal, sample_rate = librosa.load(file, sr=22050)
@@ -105,7 +105,7 @@ plt.title("Spectrogram (dB)")
 # MFCCs
 # extract 13 MFCCs
 MFCCs = librosa.feature.mfcc(signal, sample_rate, n_fft=n_fft, hop_length=hop_length, n_mfcc=13)
-
+print("Shape of the MFCCs is {}".format(MFCCs.shape))
 # display MFCCs
 plt.figure(figsize=FIG_SIZE)
 librosa.display.specshow(MFCCs, sr=sample_rate, hop_length=hop_length)
@@ -132,7 +132,6 @@ def normalize(x, axis=0):
 
 # Spectral Centeriod
 spectral_centroids = librosa.feature.spectral_centroid(signal, sr=sample_rate)[0]
-print(spectral_centroids.shape)
 # Computing the time variable for visualization
 plt.figure(figsize=FIG_SIZE)
 frames = range(len(spectral_centroids))
@@ -184,7 +183,7 @@ plt.figure(figsize=FIG_SIZE)
 plt.plot(signal[n0:n1])
 plt.grid()
 zero_crossings = librosa.zero_crossings(signal[n0:n1], pad=False)
-print(sum(zero_crossings))
+print("Zero crossings in the interval [{},{}] is {}".format(n0, n1, sum(zero_crossings)))
 plt.title("Zero-Crossing Rate")
 
 

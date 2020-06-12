@@ -1,6 +1,7 @@
 venv/
 yt_dataset
 yt_downloads
+tempCodeRunnerFile.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
