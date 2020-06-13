@@ -8,7 +8,7 @@ import librosa
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-DETECTION_DATASET_PATHS = [os.path.join(BASE_DIR, "detection_dataset")]
+DETECTION_DATASET_PATHS = [os.path.join(BASE_DIR, "clean_detection_dataset")]
 DETECTION_JSON_PATH = "detection_data.json"
 DETECTION_CSV_PATH = "detection_data.csv"
 CLASSIFICATION_DATASET_PATHS = [os.path.join(BASE_DIR, "yt_dataset"), os.path.join(BASE_DIR, "clean_classification_dataset")]
@@ -224,7 +224,7 @@ if __name__ == "__main__":
 
 
     mapping_file = open(os.path.join(BASE_DIR, "mapping.txt"), 'w')
-    print("Creating detection dataset.")
+    print("Creating detection feature dataset.")
     mapping_file.write("\nDetection:")
     # log_file = open(os.path.join(BASE_DIR, "detection_log.txt"), 'w')
     # save_features_in_JSON(DETECTION_DATASET_PATHS, DETECTION_JSON_PATH, num_segments=1)
@@ -232,9 +232,9 @@ if __name__ == "__main__":
     log_file = open(os.path.join(BASE_DIR, "detection_log.txt"), 'w')
     save_features_in_CSV(DETECTION_DATASET_PATHS, DETECTION_CSV_PATH, num_segments=1)
     log_file.close()
-    print("Detection dataset created successuflly.")
+    print("Detection feature dataset created successuflly.")
 
-    print("Creating classification dataset.")
+    print("Creating classification feature dataset.")
     mapping_file.write("\nClassification:")
     # log_file = open(os.path.join(BASE_DIR, "classification_log.txt"), 'w')
     # save_features_in_JSON(CLASSIFICATION_DATASET_PATHS, CLASSIFICATION_JSON_PATH, num_segments=1)
@@ -242,5 +242,5 @@ if __name__ == "__main__":
     log_file = open(os.path.join(BASE_DIR, "classification_log.txt"), 'w')
     save_features_in_CSV(CLASSIFICATION_DATASET_PATHS, CLASSIFICATION_CSV_PATH, num_segments=1)
     log_file.close()
-    print("Classification dataset created successuflly.")
+    print("Classification feature dataset created successuflly.")
     mapping_file.close()

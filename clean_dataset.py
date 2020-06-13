@@ -20,7 +20,7 @@ def clean_datasets(dirty_dataset_paths, min_duration=1.5, max_duration=5.0):
     for dataset_path in dirty_dataset_paths:
         dataset_name = dataset_path.split("/")[-1]
         clean_dataset_path = os.path.join(BASE_DIR, 'clean_'+dataset_name)
-        print("Creating {}...".format(clean_dataset_path))
+        print("Creating {}".format(clean_dataset_path))
         if os.path.exists(clean_dataset_path):
             shutil.rmtree(clean_dataset_path)
         # loop through all sub-folder
