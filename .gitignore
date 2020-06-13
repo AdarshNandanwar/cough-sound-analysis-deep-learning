@@ -1,5 +1,7 @@
 venv/
 # yt_dataset
+clean_detection_dataset
+clean_classification_dataset
 yt_downloads
 tempCodeRunnerFile.py
 classification_data.json
