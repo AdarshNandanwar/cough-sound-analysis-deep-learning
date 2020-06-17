@@ -182,6 +182,8 @@ def save_features_in_CSV(dataset_paths, csv_path, num_mfcc=13, n_fft=2048, hop_l
     with open(csv_path, 'w', newline='') as myfile:
         wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
         # loop through all the dataset paths
+        label_map = {}
+        curr_label_number = 0
         for dataset_path in dataset_paths:
             # loop through all sub-folder
             for i, (dirpath, dirnames, filenames) in enumerate(os.walk(dataset_path)):
@@ -189,7 +191,12 @@ def save_features_in_CSV(dataset_paths, csv_path, num_mfcc=13, n_fft=2048, hop_l
                 if dirpath is not dataset_path:
                     # save label  mapping
                     semantic_label = dirpath.split("/")[-1]
-                    mapping_file.write("\n{} : {}".format(i-1, semantic_label))
+                    label_index = label_map.get(semantic_label)
+                    if label_index == None:
+                        label_index = curr_label_number
+                        label_map[semantic_label] = label_index
+                        mapping_file.write("\n{} - {}".format(curr_label_number, semantic_label))
+                        curr_label_number += 1
                     # process all audio files in sub-dir
                     for f in filenames:
                         # audio file

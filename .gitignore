@@ -3,6 +3,7 @@ venv/
 clean_detection_dataset
 clean_classification_dataset
 yt_downloads
+temp.py
 tempCodeRunnerFile.py
 classification_data.json
 classification_data.csv
