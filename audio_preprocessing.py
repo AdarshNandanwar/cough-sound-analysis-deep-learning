@@ -222,7 +222,7 @@ def save_features_in_CSV(dataset_paths, csv_path, num_mfcc=13, n_fft=2048, hop_l
 
                             csv_row = get_features_csv_row(signal[start:finish], sample_rate, num_mfcc, n_fft, hop_length)
                             # label
-                            csv_row += [i-1]
+                            csv_row += [label_index]
                             wr.writerow(csv_row)
                             
                         log_file.write("\n")
