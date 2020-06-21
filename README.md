@@ -1,1 +1,1 @@
-# cough-sound-analysis-deep-learning
+# cough-sound-analysis-machine-learning
