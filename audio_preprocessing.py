@@ -195,7 +195,7 @@ def save_features_in_CSV(dataset_paths, csv_path, num_mfcc=13, n_fft=2048, hop_l
                     if label_index == None:
                         label_index = curr_label_number
                         label_map[semantic_label] = label_index
-                        mapping_file.write("\n{} - {}".format(curr_label_number, semantic_label))
+                        mapping_file.write("\n{}: \"{}\"".format(curr_label_number, semantic_label))
                         curr_label_number += 1
                     # process all audio files in sub-dir
                     for f in filenames:
